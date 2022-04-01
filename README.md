@@ -25,17 +25,21 @@ Specifications are first handled by an NLP model to extract Entities. The output
 
 The NLP models are two [BERT](https://arxiv.org/abs/1810.04805) model which are fine tuned to detect Entities and Relations. BERT is the state-of-the-art of Neural Machine Translation models. It includes the encoder block of the Transformer model and has been pretrained on a large corpus of text. For different purpose, the pre-trained BERT is fine-tuned by training with a small dataset represent the specific problem. 
 For the first proof-of-concept, the tool will be applicable on systems of sensors and actuators. The ontology schemes in used are [https://www.w3.org/TR/rdf-schema/](https://www.w3.org/TR/vocab-ssn/#SSNStimulus) and [SOSA](https://www.w3.org/TR/vocab-ssn/#SSNStimulus). We will use a subset of SOSA ontology. The Entity class that can be detected by BERT are:
-> B-SEN #sosa:Sensor
+> 
 > I-SEN #sosa:Sensor
-> B-STI #ssn:Stimulus
-> I-STI #ssn:Stimulus
-> B-ACT #sosa:Actuator
-> I-ACT #sosa:Actuator
-> B-ACTPROB #sosa:ActuatableProperty
-> I-ACTPROB #sosa:ActuatableProperty
-> B-PLAT #sosa:Platform
-> I-PLAT #sosa:Platform
-> O
+> 
+| Entity class      | Ontology Mapping |
+| ----------- | ----------- |
+| B-SEN |sosa:Sensor      |
+| B-STI |ssn:Stimulus
+> I-STI |ssn:Stimulus
+> B-ACT |sosa:Actuator
+> I-ACT |sosa:Actuator
+> B-ACTPROB |sosa:ActuatableProperty
+> I-ACTPROB |sosa:ActuatableProperty
+> B-PLAT |#sosa:Platform
+> I-PLAT |sosa:Platform
+> O        | None
 The tokenization of the examble for the Entity Detection mode is:
 > O B-Plat  O O O O O B-Prop B-Sen O O O O O O O O O O B-Prop B-Act O
 
