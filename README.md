@@ -31,15 +31,15 @@ For the first proof-of-concept, the tool will be applicable on systems of sensor
 | Entity class      | Ontology Mapping |
 | ----------- | ----------- |
 | B-SEN |sosa:Sensor      |
-| B-STI |ssn:Stimulus
-> I-STI |ssn:Stimulus
-> B-ACT |sosa:Actuator
-> I-ACT |sosa:Actuator
-> B-ACTPROB |sosa:ActuatableProperty
-> I-ACTPROB |sosa:ActuatableProperty
-> B-PLAT |#sosa:Platform
-> I-PLAT |sosa:Platform
-> O        | None
+| B-STI |ssn:Stimulus |
+| I-STI |ssn:Stimulus |
+| B-ACT |sosa:Actuator |
+| I-ACT |sosa:Actuator |
+| B-ACTPROB |sosa:ActuatableProperty |
+| I-ACTPROB |sosa:ActuatableProperty |
+| B-PLAT |sosa:Platform |
+| I-PLAT |sosa:Platform |
+| O        | None |
 The tokenization of the examble for the Entity Detection mode is:
 > O B-Plat  O O O O O B-Prop B-Sen O O O O O O O O O O B-Prop B-Act O
 
