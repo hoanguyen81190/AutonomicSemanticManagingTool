@@ -40,6 +40,7 @@ For the first proof-of-concept, the tool will be applicable on systems of sensor
 | B-PLAT |sosa:Platform |
 | I-PLAT |sosa:Platform |
 | O        | None |
+
 The tokenization of the examble for the Entity Detection mode is:
 > O B-Plat  O O O O O B-Prop B-Sen O O O O O O O O O O B-Prop B-Act O
 
